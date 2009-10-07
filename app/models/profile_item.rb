@@ -8,7 +8,7 @@ class ProfileItem < ActiveRecord::Base
             :versions => { "thumb" => "48x48", "medium" => "125x125","large" => "640x480" }
           }
               
-  validates_filesize_of :icon, :in => 0.kilobytes..2048.kilobytes 
+  validates_filesize_of :icon, :in => 0.kilobytes..4096.kilobytes 
   validates_file_format_of :icon, :in => ["gif", "png", "jpg","bmp"] 
   
   file_column :file_attached
